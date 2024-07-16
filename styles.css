@@ -12,27 +12,31 @@ body {
 }
 
 .timeline {
-    position: relative;
-    width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
     padding: 20px;
-    border-left: 3px solid #3b3b3b;
-}
-
-.event {
+    white-space: nowrap;
+    border-top: 3px solid #3b3b3b;
     position: relative;
-    margin: 20px 0;
-    padding-left: 30px;
-    transition: all 0.3s ease;
 }
 
-.event:hover {
+.milestone {
+    display: inline-block;
+    position: relative;
+    margin: 0 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.milestone:hover {
     background: rgba(0, 0, 0, 0.05);
     border-radius: 8px;
+    padding: 10px;
 }
 
-.event .year {
+.milestone .year {
     font-weight: bold;
     color: #3b3b3b;
     font-size: 1.1em;
@@ -40,11 +44,12 @@ body {
     display: block;
 }
 
-.event::before {
+.milestone::before {
     content: '';
     position: absolute;
-    left: -16px;
-    top: 5px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 12px;
     height: 12px;
     background-color: #3b3b3b;
