@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
             tooltipContent.textContent = content;
 
             tooltip.style.display = 'block';
-            tooltip.style.left = e.pageX + 'px';
-            tooltip.style.top = e.pageY + 'px';
+            tooltip.style.left = e.pageX + 15 + 'px';
+            tooltip.style.top = e.pageY + 15 + 'px';
         });
 
         event.addEventListener('mouseout', function() {
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('mousemove', function(e) {
         if (tooltip.style.display === 'block') {
-            tooltip.style.left = e.pageX + 'px';
-            tooltip.style.top = e.pageY + 'px';
+            tooltip.style.left = e.pageX + 15 + 'px';
+            tooltip.style.top = e.pageY + 15 + 'px';
         }
     });
 });
