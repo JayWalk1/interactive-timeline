@@ -1,14 +1,14 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
-    const events = document.querySelectorAll('.event');
+    const milestones = document.querySelectorAll('.milestone');
     const tooltip = document.getElementById('tooltip');
     const tooltipTitle = document.getElementById('tooltip-title');
     const tooltipContent = document.getElementById('tooltip-content');
 
-    events.forEach(event => {
-        event.addEventListener('mouseover', function(e) {
-            const title = event.getAttribute('data-title');
-            const content = event.getAttribute('data-content');
+    milestones.forEach(milestone => {
+        milestone.addEventListener('mouseover', function(e) {
+            const title = milestone.getAttribute('data-title');
+            const content = milestone.getAttribute('data-content');
 
             tooltipTitle.textContent = title;
             tooltipContent.textContent = content;
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tooltip.style.top = e.pageY + 15 + 'px';
         });
 
-        event.addEventListener('mouseout', function() {
+        milestone.addEventListener('mouseout', function() {
             tooltip.style.display = 'none';
         });
     });
